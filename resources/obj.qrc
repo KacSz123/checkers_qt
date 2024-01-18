@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/3d_models/wolf">
+        <file>3d_models/wolf.obj</file>
+    </qresource>
+</RCC>

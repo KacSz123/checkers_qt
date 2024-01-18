@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>821</width>
+    <height>594</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <rect>
       <x>-1</x>
       <y>-1</y>
-      <width>801</width>
+      <width>811</width>
       <height>581</height>
      </rect>
     </property>
@@ -32,10 +32,10 @@
     <widget class="QFrame" name="boardFrame">
      <property name="geometry">
       <rect>
-       <x>9</x>
-       <y>9</y>
-       <width>571</width>
-       <height>511</height>
+       <x>0</x>
+       <y>0</y>
+       <width>560</width>
+       <height>510</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -44,17 +44,14 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="MyGLWidget" name="openGLWidget">
+     <widget class="BoardGLWidget" name="openGLWidget">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>571</width>
-        <height>511</height>
+        <width>560</width>
+        <height>510</height>
        </rect>
-      </property>
-      <property name="cursor">
-       <cursorShape>OpenHandCursor</cursorShape>
       </property>
      </widget>
     </widget>
@@ -63,12 +60,12 @@
       <rect>
        <x>580</x>
        <y>10</y>
-       <width>221</width>
+       <width>231</width>
        <height>541</height>
       </rect>
      </property>
      <property name="cursor">
-      <cursorShape>CrossCursor</cursorShape>
+      <cursorShape>ArrowCursor</cursorShape>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -76,6 +73,146 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>231</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="tabFrame">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>290</y>
+        <width>241</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>221</width>
+         <height>241</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="xyz">
+        <attribute name="title">
+         <string>XYZ</string>
+        </attribute>
+        <widget class="QFrame" name="frame">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>9</y>
+           <width>211</width>
+           <height>201</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QSlider" name="boardSliderX">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>25</width>
+            <height>180</height>
+           </rect>
+          </property>
+          <property name="cursor">
+           <cursorShape>OpenHandCursor</cursorShape>
+          </property>
+          <property name="mouseTracking">
+           <bool>false</bool>
+          </property>
+          <property name="minimum">
+           <number>-180</number>
+          </property>
+          <property name="maximum">
+           <number>180</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+         <widget class="QSlider" name="boardSliderY">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>10</y>
+            <width>25</width>
+            <height>180</height>
+           </rect>
+          </property>
+          <property name="cursor">
+           <cursorShape>OpenHandCursor</cursorShape>
+          </property>
+          <property name="minimum">
+           <number>-180</number>
+          </property>
+          <property name="maximum">
+           <number>180</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+         <widget class="QSlider" name="boardSliderZ">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>10</y>
+            <width>25</width>
+            <height>180</height>
+           </rect>
+          </property>
+          <property name="cursor">
+           <cursorShape>OpenHandCursor</cursorShape>
+          </property>
+          <property name="minimum">
+           <number>-180</number>
+          </property>
+          <property name="maximum">
+           <number>180</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>Tab 2</string>
+        </attribute>
+       </widget>
+      </widget>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -84,8 +221,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>21</height>
+     <width>821</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>
@@ -93,9 +230,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>MyGLWidget</class>
+   <class>BoardGLWidget</class>
    <extends>QOpenGLWidget</extends>
-   <header location="global">boardopengl.h</header>
+   <header location="global">boardglwidget.hh</header>
   </customwidget>
  </customwidgets>
  <resources/>
