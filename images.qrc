@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/board_img">
+        <file alias="board_png">img/board8x8.png</file>
+        <file alias="board_svg">img/board8x8.svg</file>
+        <file alias="piece_png">img/piece_black.png</file>
+        <file alias="piece_svg">img/piece_black.svg</file>
+    </qresource>
+</RCC>
