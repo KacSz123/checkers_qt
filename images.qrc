@@ -4,5 +4,6 @@
         <file alias="board_svg">img/board8x8.svg</file>
         <file alias="piece_png">img/piece_black.png</file>
         <file alias="piece_svg">img/piece_black.svg</file>
+        <file alias="piece_png_act">img/piece_black_act.png</file>
     </qresource>
 </RCC>
