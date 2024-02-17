@@ -1,7 +1,7 @@
 #ifndef CHECKERSPIECE_H
 #define CHECKERSPIECE_H
 #include <stdint.h>
-
+#include<QString>
 
 class CheckersPiece
 {
@@ -10,11 +10,13 @@ class CheckersPiece
     int _position;
     colorTypedef _color;
     stateTypedef _status;
+    QString _ActivatedName;
+    QString _notActivatedName;
 public:
 //    using colorType = colorTypedef;
     static uint8_t _pieceCounter;
     CheckersPiece();
-    CheckersPiece(int position, CheckersPiece::colorTypedef color);
+    CheckersPiece(int position, CheckersPiece::colorTypedef color, QString activated = ":/board_img/piece_png_act", QString notActivated=":/board_img/piece_png");
 
 //    static void  pieceCounterInit(){ uint8_t CheckersPiece::_pieceCounter=0;};
 };

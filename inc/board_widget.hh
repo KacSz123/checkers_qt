@@ -10,6 +10,7 @@
 #include<QPaintEvent>
 #include<QPoint>
 #include<QPoint>
+#include<memory>
 #include "checkersboard.hh"
 class BoardWidget : public QWidget
 {
@@ -17,7 +18,8 @@ class BoardWidget : public QWidget
 
     Q_OBJECT
     const QImage *tlo= new QImage(":/board_img/board_png");
-    QImage *piece= new QImage(":/board_img/piece_png");
+    std::unique_ptr<QImage>  piece;
+
     QTimer *_boardTimer;
     QPoint *_p;
     CheckersBoard _board;

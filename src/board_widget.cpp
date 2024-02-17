@@ -3,7 +3,7 @@
 BoardWidget::BoardWidget(QWidget *parent)
     : QWidget{parent}
 {
-
+    piece =  std::unique_ptr<QImage>(new QImage(":/board_img/piece_png"));
     _boardTimer = new QTimer();
     _p = new QPoint();
     _boardTimer->setInterval(300);
@@ -43,14 +43,13 @@ void BoardWidget::timerEventHandler()
 void BoardWidget::mousePressEvent(QMouseEvent *event)
 {
     qInfo()<<"mouse clicked! on: "<<*_p;
-    delete piece;
-    piece = new QImage(":/board_img/piece_png_act");
+//    delete piece;
+    piece.reset(new QImage(":/board_img/piece_png_act"));
 
 }
 
 void BoardWidget::mouseReleaseEvent(QMouseEvent *event)
 {
-     delete piece;
-   piece = new QImage(":/board_img/piece_png");
+     piece.reset (new QImage(":/board_img/piece_png"));
 //    qInfo()<<"mouse clicked!";
 }

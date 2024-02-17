@@ -7,7 +7,9 @@ CheckersPiece::CheckersPiece():_position(0),_color(colorTypedef::BLACK), _status
    //CheckersPiece::pieceCounterInit();
 }
 
-CheckersPiece::CheckersPiece(int position, CheckersPiece::colorTypedef color):_position(position), _color(color), _status(stateTypedef::ALIVE_NOT_ACTIVATED)
+CheckersPiece::CheckersPiece(int position, CheckersPiece::colorTypedef color,
+                             QString activated, QString notActivated):
+                            _position(position), _color(color), _status(stateTypedef::ALIVE_NOT_ACTIVATED), _ActivatedName(activated), _notActivatedName(notActivated)
 {
 
 }
