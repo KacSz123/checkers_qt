@@ -8,27 +8,33 @@ INCLUDEPATH += inc/
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
-#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    src/pawn.cpp \
+    src/player.cpp \
     src/checkersboard.cpp \
     src/board_widget.cpp \
     src/checkerspiece.cpp \
     src/main.cpp \
-    src/mainwindow.cpp
+    src/mainwindow.cpp \
+    src/queen.cpp
 
 HEADERS += \
+    inc/pawn.hh \
+    inc/player.hh \
     inc/board_widget.hh \
     inc/checkersboard.hh \
     inc/checkerspiece.hh \
-    inc/mainwindow.h
+    inc/mainwindow.h \
+    inc/queen.hh
 
 FORMS += \
     mainwindow.ui
 
 TRANSLATIONS += \
     checkers_qt_en_GB.ts
-CONFIG += lrelease
+#CONFIG += lrelease
 CONFIG += embed_translations
 
 # Default rules for deployment.
