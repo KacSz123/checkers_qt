@@ -17,8 +17,7 @@ SOURCES += \
     src/board_widget.cpp \
     src/checkerspiece.cpp \
     src/main.cpp \
-    src/mainwindow.cpp \
-    src/queen.cpp
+    src/mainwindow.cpp
 
 HEADERS += \
     inc/pawn.hh \
@@ -26,8 +25,7 @@ HEADERS += \
     inc/board_widget.hh \
     inc/checkersboard.hh \
     inc/checkerspiece.hh \
-    inc/mainwindow.h \
-    inc/queen.hh
+    inc/mainwindow.h
 
 FORMS += \
     mainwindow.ui

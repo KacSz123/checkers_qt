@@ -7,13 +7,15 @@
 //Qt libs
 #include<QDebug>
 
+// my classes
+#include "pawn.hh"
 /*!
  * \brief The player class
  */
 class Player
 {
 private:
-    std::list<int> _listOfPieces;
+    std::list<Pawn> _listOfPieces;
 public:
     Player();
 };
