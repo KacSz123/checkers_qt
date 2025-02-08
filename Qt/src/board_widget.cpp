@@ -36,6 +36,7 @@ void BoardWidget::paintEvent(QPaintEvent *)
 
 void BoardWidget::timerEventHandler()
 {
+
     *_p = this->mapFromGlobal(QCursor::pos());
     qDebug()<<*_p<<" on screen: "<<height()<<"    "<<width();
 }
@@ -44,12 +45,21 @@ void BoardWidget::mousePressEvent(QMouseEvent *event)
 {
     qInfo()<<"mouse clicked! on: "<<*_p;
 //    delete piece;
-    piece.reset(new QImage(":/board_img/piece_png_act"));
+   // piece->
+   QPoint tmpPoint(int((tlo->width()*boardRatioX)+4*tlo->width()*squareRatioX),int(tlo->height()*boardRatioY+3*tlo->width()*squareRatioY));
 
+   if(_p->rx() > tmpPoint.rx() - int(tlo->width()*squareRatioX)/2 && _p->rx() < tmpPoint.rx() + int(tlo->width()*squareRatioX)/2 &&
+      _p->ry() > tmpPoint.ry() - int(tlo->height()*squareRatioY)/2 && _p->ry() < tmpPoint.ry() + int(tlo->height()*squareRatioY)/2 )
+   {
+
+    piece.reset(new QImage(":/board_img/piece_png_act"));
+   }
 }
 
 void BoardWidget::mouseReleaseEvent(QMouseEvent *event)
 {
+
+
      piece.reset (new QImage(":/board_img/piece_png"));
 //    qInfo()<<"mouse clicked!";
 }

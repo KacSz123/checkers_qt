@@ -11,6 +11,7 @@ INCLUDEPATH += inc/
 DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    src/checkersqueen.cpp \
     src/pawn.cpp \
     src/player.cpp \
     src/checkersboard.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
     src/mainwindow.cpp
 
 HEADERS += \
+    inc/checkersqueen.hh \
     inc/pawn.hh \
     inc/player.hh \
     inc/board_widget.hh \
