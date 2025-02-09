@@ -75,5 +75,7 @@ build-checkers_qt*/*
 build-checkers_qt*/*
 build-checkers_qt-Desktop-Profile
 build-checkers_qt-Desktop-Profile/*
+build-checkers_qt-Desktop-Debug/
+build-checkers_qt-Desktop-Debug/*
 
-
+build-checkers_qt-Desktop-Debug/board_widget.o
