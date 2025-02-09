@@ -2,12 +2,13 @@
 #define CHECKERSPIECE_H
 #include <stdint.h>
 #include<QString>
-#include<QPoint>>
+#include<QPoint>
 class CheckersPiece
 {
     typedef enum {BLACK, WHITE}colorTypedef;
-    typedef enum {ALIVE_NOT_ACTIVATED, DEAD, GRABBED, ACTIVATED} stateTypedef;
+    typedef enum {NOT_ACTIVATED, ACTIVATED, DEAD, GRABBED} stateTypedef;
     int _position;
+
     colorTypedef _color;
     stateTypedef _status;
     QString _ActivatedName;
@@ -18,9 +19,10 @@ public:
     static uint8_t _pieceCounter;
     CheckersPiece();
     CheckersPiece(int position, CheckersPiece::colorTypedef color, QString activated = ":/board_img/piece_png_act", QString notActivated=":/board_img/piece_png");
-
+    void setPosition(int p){ this->_position = p;};
+    int getPosition(){return this->_position;};
     void activatePiece() {_status = ACTIVATED;};
-    void deactivatePiece() {_status = ALIVE_NOT_ACTIVATED;}
+    void deactivatePiece() {_status = NOT_ACTIVATED;}
     //    static void  pieceCounterInit(){ uint8_t CheckersPiece::_pieceCounter=0;};
 };
 

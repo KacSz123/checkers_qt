@@ -71,7 +71,7 @@ Thumbs.db
 *.dll
 *.exe
 # builds
-build-checkers*
+build-checkers_qt*
 
 
 
